@@ -22,7 +22,8 @@ def get_posts():
 
 @app.post("/createposts")
 def create_posts(new_post: Post):
-    print(new_post.rating)
-    return {"data": "new post"}
+    print(new_post)
+    print(new_post.dict())
+    return {"data": new_post}
 # title str, content str
 
